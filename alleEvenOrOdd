@@ -1,0 +1,45 @@
+function alleEvenOrOdd(arr){
+    if( arr[0] % 2 === 0 && arr[1] % 2 === 0 ){
+        for( var i = 0; i < arr.length; i++ ){
+            if ( arr[i] % 2 !== 0 ){
+                return arr[i];
+            }
+        }
+    }
+    else if( arr[0] % 2 !== 0 && arr[1] % 2 !== 0 ){
+        for( var i = 0; i < arr.length; i++ ){
+            if ( arr[i] % 2 === 0 ){
+                return arr[i];
+            }
+        }
+    }
+    else if( arr[0] % 2 === 0 && arr[2] % 2 === 0 ){
+        return arr[1];
+    }
+    else if( arr[1] % 2 === 0 && arr[2] % 2 === 0 ){
+        return arr[0];
+    }
+    else if( arr[0] % 2 !== 0 && arr[2] % 2 !== 0 ){
+        return arr[1];
+    }
+    else if( arr[1] % 2 !== 0 && arr[2] % 2 !== 0 ){
+        return arr[0];
+    }
+}
+
+/*
+
+if arrays 1st and second index are both even
+iterate over the array checking each index to see if they are odd
+if odd return it
+
+else if arrays 1st and 2nd index are both odd
+iterate over the array checking each index to see if htey are even
+if even return it
+
+else if 1st and 3rd index are both even return the 2nd index
+
+else if 2nd and 3rd are both even return the 1st index
+
+
+*/
